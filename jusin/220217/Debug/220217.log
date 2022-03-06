@@ -1,0 +1,6 @@
+﻿  220217.cpp
+C:\Users\thehe\source\repos\jusin\220217\220217.cpp(57,19): warning C4309: '초기화 중': 상수 값이 잘립니다.
+C:\Users\thehe\source\repos\jusin\220217\220217.cpp(73,24): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\thehe\source\repos\jusin\220217\220217.cpp(89,27): warning C4305: '초기화 중': 'double'에서 'bool'(으)로 잘립니다.
+C:\Users\thehe\source\repos\jusin\220217\220217.cpp(50,9): warning C4101: 'iTemp' :참조되지 않은 지역 변수입니다.
+  220217.vcxproj -> C:\Users\thehe\source\repos\jusin\Debug\220217.exe

@@ -1,0 +1,8 @@
+﻿  포인터.cpp
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(5,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(92,6): error C2374: 'iA': 재정의. 여러 번 초기화했습니다.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(37): message : 'iA' 선언을 참조하십시오.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(92,15): error C2374: 'iB': 재정의. 여러 번 초기화했습니다.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(53): message : 'iB' 선언을 참조하십시오.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(93,7): error C2088: '<<': class에 맞지 않습니다.
+C:\Users\thehe\source\repos\jusin\220228\포인터.cpp(96,7): error C2088: '<<': class에 맞지 않습니다.
