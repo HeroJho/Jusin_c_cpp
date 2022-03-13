@@ -1,8 +1,9 @@
 ﻿  TestRpgSave.cpp
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(39,1): warning C4150: 불완전한 형식 'Player'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(21): message : 'Player' 선언을 참조하십시오.
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(56,1): warning C4150: 불완전한 형식 'Player'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(21): message : 'Player' 선언을 참조하십시오.
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(336,1): warning C4154: 배열 식을 삭제했습니다. 포인터로 변환이 제공됩니다.
-C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(370,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(28,9): warning C4068: 알 수 없는 pragma입니다.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(44,1): warning C4150: 불완전한 형식 'Player'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(24): message : 'Player' 선언을 참조하십시오.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(61,1): warning C4150: 불완전한 형식 'Player'에 대한 포인터를 삭제했습니다. 소멸자가 호출되지 않습니다.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(24): message : 'Player' 선언을 참조하십시오.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(403,1): warning C4154: 배열 식을 삭제했습니다. 포인터로 변환이 제공됩니다.
+C:\Users\thehe\source\repos\jusin\220311Assignments\TestRpgSave.cpp(518,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
   220311Assignments.vcxproj -> C:\Users\thehe\source\repos\jusin\Debug\220311Assignments.exe

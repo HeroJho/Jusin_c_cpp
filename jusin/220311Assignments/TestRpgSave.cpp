@@ -3,9 +3,12 @@ using namespace std;
 
 #pragma region TOOL
 
-enum JOB { WARRIOR = 1, MAGE, ACHER };
-enum PROCESS { NONE, MAIN, VILLAGE, HUNT, INVEN, LOGOUT, COUNT = LOGOUT};
-enum POTION {S, M, L, V};
+enum JOB        { WARRIOR = 1, MAGE, ACHER };
+enum PROCESS    { NONE, MAIN, VILLAGE, HUNT, INVEN, LOGOUT, COUNT = LOGOUT};
+enum ITEMTYPE   { _CONSUM, _WEAPON, _ARMOR };
+enum POTION     { S, M, L, V };
+enum ARMOR      { AA = 100, AB, AC };
+enum WEAPON     { WA = 200, WB, WC };
 
 bool ChackRange(int _iValue, int _iMin, int _iMax)
 {
@@ -20,8 +23,9 @@ bool ChackRange(int _iValue, int _iMin, int _iMax)
 
 typedef struct Player p;
 typedef struct Inventory i;
+typedef struct EquipmentInven e;
 
-#pragma endregion
+#pragma endregions
 
 #pragma region Managers
 
@@ -29,6 +33,7 @@ struct GameManager
 {
     Player* player = nullptr;
     Inventory* inven = nullptr;
+    EquipmentInven* equip = nullptr;
 
     PROCESS process = NONE;
     PROCESS preProcess = NONE;
@@ -64,7 +69,7 @@ GameManager manager = { };
 
 #pragma region STRUCT
 
-struct SaveData
+struct StatData
 {
     JOB job;
     int iLevel;
@@ -72,25 +77,32 @@ struct SaveData
     int iMaxHp;
     int iHp;
     int iAt;
+    int iDf;
 
+};
+struct EquipmentInven
+{
+    int iAt = 0;
+    int iDf = 0;
 };
 
 struct Player
 {
     const char* pJobStr;
-    SaveData saveData;
+    StatData statData;
 
     void Init(int _iMaxHp, int _iAt)
     {
-        saveData.iLevel = 1;
-        saveData.iExp = 0;
-        saveData.iMaxHp = _iMaxHp;
-        saveData.iHp = saveData.iMaxHp;
-        saveData.iAt = _iAt;
+        statData.iLevel = 1;
+        statData.iExp = 0;
+        statData.iMaxHp = _iMaxHp;
+        statData.iHp = statData.iMaxHp;
+        statData.iAt = _iAt;
+        statData.iDf = 0;
     }
-    void  SetJob(JOB _j)
+    void SetJob(JOB _j)
     {
-        saveData.job = _j;
+        statData.job = _j;
 
         switch (_j)
         {
@@ -103,28 +115,30 @@ struct Player
     }
     void GetExp(int _exp)
     {
-        saveData.iExp += _exp;
-        if (saveData.iExp >= saveData.iLevel * saveData.iLevel)
-            ++saveData.iLevel;
+        statData.iExp += _exp;
+        if (statData.iExp >= statData.iLevel * statData.iLevel)
+            ++statData.iLevel;
     }
     void GetHp(int _ivalue)
     {
-        saveData.iHp += _ivalue;
-        if (saveData.iHp > saveData.iMaxHp)
-            saveData.iHp = saveData.iMaxHp;
+        statData.iHp += _ivalue;
+        if (statData.iHp > statData.iMaxHp)
+            statData.iHp = statData.iMaxHp;
     }
+
+    int GetTotalAt() { return statData.iAt + manager.equip->iAt; }
+    int GetTotalDf() { return statData.iDf + manager.equip->iDf; }
 
     void PrintInfo()
     {
         cout << "=============== PlayerInfo ===============" << endl;
-        cout << "직업: " << pJobStr << "  공격력: " << saveData.iAt << "  체력: " << saveData.iHp << "/" << saveData.iMaxHp << endl;
-        cout << "레벨: " << saveData.iLevel << "  경험치: " << saveData.iExp << "/" << saveData.iLevel * 10 << endl;
-        cout << "==========================================" << endl;
+        cout << "직업: " << pJobStr << "  공격력: " << GetTotalAt() << "(+" << manager.equip->iAt << ")" << "  방어력: " << GetTotalDf() << "(+" << manager.equip->iDf << ")" << "  체력: " << statData.iHp << "/" << statData.iMaxHp << endl;
+        cout << "레벨: " << statData.iLevel << "  경험치: " << statData.iExp << "/" << statData.iLevel * 10 << endl;
     }
     void ChackRevival()
     {
-        if (saveData.iHp <= 0)
-            saveData.iHp = saveData.iMaxHp;
+        if (statData.iHp <= 0)
+            statData.iHp = statData.iMaxHp;
     }
 };
 struct Monster
@@ -147,13 +161,13 @@ struct Monster
     }
     void PrintInfo()
     {
-        cout << "=============== PlayerInfo ===============" << endl;
-        cout << "이름: " << pNameStr << "  공격력: " << iAt << "  체력: " << iHp << "/" << iMaxHp << endl;
+        cout << "=============== " << pNameStr << " ===============" << endl;
+        cout << "공격력: " << iAt << "  체력: " << iHp << "/" << iMaxHp << endl;
     }
     bool Attack(Player* _player)
     {
-        _player->saveData.iHp -= iAt;
-        if (_player->saveData.iHp <= 0)
+        _player->statData.iHp -= iAt;
+        if (_player->statData.iHp <= 0)
             return true;
         return false;
     }
@@ -161,8 +175,11 @@ struct Monster
 
 struct Item
 {
+    ITEMTYPE itemType;
     int iId;
+    bool bCanStore;
     int iCount;
+    const char* cName;
 
     virtual bool Use()
     {
@@ -174,6 +191,7 @@ struct Item
 
     }
 };
+
 struct Cunsum : Item
 {
 
@@ -190,10 +208,11 @@ struct Cunsum : Item
 struct HpPotion : Cunsum
 {
     int iRecorvValue;
-    const char* cName;
 
     void MakePotion(POTION _iSize, int _iCount)
     {
+        itemType = _CONSUM;
+        bCanStore = true;
         iCount = _iCount;
 
         switch (_iSize)
@@ -227,6 +246,21 @@ struct HpPotion : Cunsum
     }
 
 };
+
+struct Equipment : Item
+{
+    bool isEquiped;
+
+    virtual bool Use()
+    {
+        return true;
+    }
+    virtual void PrintInfo()
+    {
+
+    }
+};
+
 struct Inventory
 {
     Item* Items[10] = {};
@@ -235,14 +269,18 @@ struct Inventory
     void GetItem(Item* _item)
     {
         // 뭉쳐지는 아이템이 있는지 확인
-        for (int i = 0; i < iMaxPointer; i++)
+        if (_item->bCanStore)
         {
-            if (Items[i]->iId == _item->iId)
+            for (int i = 0; i < iMaxPointer; i++)
             {
-                Items[i]->iCount += _item->iCount;
-                return;
+                if (Items[i]->iId == _item->iId)
+                {
+                    Items[i]->iCount += _item->iCount;
+                    return;
+                }
             }
         }
+
         // 없으면 인벤 크기 확인
         if (iMaxPointer > 9)
         {
@@ -264,17 +302,34 @@ struct Inventory
             system("pause");
             return;
         }
-        
+
         if (!Items[_iIndex]->Use())    // false면 전부 소진
         {
-            for (int i = _iIndex; i < iMaxPointer; i++)
+            if (Items[_iIndex]->itemType == _CONSUM)    // 포션일 때
             {
-                Items[i] = Items[i + 1];
+                for (int i = _iIndex; i < iMaxPointer; i++)
+                {
+                    Items[i] = Items[i + 1];
+                }
+                --iMaxPointer;
+                cout << "아이템을 사용했습니다!" << endl;
+                system("pause");
+                return;
             }
-            --iMaxPointer;
+            else                                        // 장비일 때
+            {
+                // 아이템 착용 불가
+                cout << "착용이 불가능 합니다." << endl;
+                system("pause");
+                return;
+            }
+
         }
 
-        cout << "아이템을 사용했습니다!" << endl;
+        if (Items[_iIndex]->itemType == _CONSUM)
+            cout << "아이템을 사용했습니다!" << endl;
+        else
+            cout << "아이템을 착용했습니다!" << endl;
         system("pause");
     }
     void OpenInven()
@@ -290,7 +345,7 @@ struct Inventory
                 cout << "[" << i + 1 << "] ";
                 Items[i]->PrintInfo();
             }
-            cout << "==================================" << endl;
+            cout << "====================" << endl;
             cout << "1.아이템 사용   2.가방 닫기 >> ";
             cin >> iInput;
 
@@ -328,6 +383,18 @@ struct Inventory
 
         UseItem(iInput);
     }
+    int CheckEquipItem(ITEMTYPE type)
+    {
+        for (int i = 0; i < iMaxPointer; i++)
+        {
+            if (Items[i]->itemType == type && Items[i])
+            {
+                Equipment* ep = (Equipment*)Items[i];
+                if (ep->isEquiped) return i;
+            }
+        }
+        return -1;
+    }
 
     void DeleteItem()
     {
@@ -337,6 +404,87 @@ struct Inventory
     }
 
 };
+
+struct Armor : Equipment
+{
+    int iAt;
+
+    void MakeArmor(ARMOR _rare)
+    {
+        itemType = _ARMOR;
+        bCanStore = false;
+        isEquiped = false;
+
+        switch (_rare)
+        {
+        case AA: iId = AA; iAt = 5;   cName = "나무 검";
+            break;
+        case AB: iId = AB; iAt = 10;   cName = "철 검";
+            break;
+        case AC: iId = AC; iAt = 20;   cName = "금 검";
+            break;
+        }
+    }
+    virtual bool Use()
+    {
+        // 같은 종류의 아이템을 착용 여부
+        int index = manager.inven->CheckEquipItem(itemType);
+        if (index != -1)  // 있다!
+        {
+            Item* tem = manager.inven->Items[index];
+            ((Equipment*)tem)->isEquiped = false;
+        }
+
+        manager.equip->iAt = iAt;
+        isEquiped = true;
+        return true;
+    }
+    virtual void PrintInfo()
+    {
+        cout << cName << (isEquiped ? "  [착용 중]" : " ") << endl;
+    }
+
+};
+struct Weapon : Equipment
+{
+    int iDf;
+
+    void MakeWeapon(WEAPON _rare)
+    {
+        itemType = _WEAPON;
+        bCanStore = false;
+        isEquiped = false;
+
+        switch (_rare)
+        {
+        case WA: iId = WA; iDf = 5;   cName = "천 갑옷";
+            break;
+        case WB: iId = WB; iDf = 10;   cName = "철 갑옷";
+            break;
+        case WC: iId = WC; iDf = 20;   cName = "금 갑옷";
+            break;
+        }
+    }
+    virtual bool Use()
+    {
+        // 같은 종류의 아이템을 착용 여부
+        int index = manager.inven->CheckEquipItem(itemType);
+        if (index != -1)  // 있다!
+        {
+            Item* tem = manager.inven->Items[index];
+            ((Equipment*)tem)->isEquiped = false;
+        }
+
+        manager.equip->iDf = iDf;
+        isEquiped = true;
+        return true;
+    }
+    virtual void PrintInfo()
+    {
+        cout << cName << (isEquiped ? "  [착용 중]" : " ") << endl;
+    }
+};
+
 
 #pragma endregion
 
@@ -356,7 +504,7 @@ void GoToHunt(Player*);
 bool AttackAtoB(Player*, Monster*);
 bool AttackAtoB(Monster*, Player*);
 
-void GetItem(int, int);
+void GetItem(int, int = 0);
 
 #pragma endregion
 
@@ -370,6 +518,7 @@ void main()
 {
     manager.process = MAIN;
     manager.inven = new Inventory();
+    manager.equip = new EquipmentInven();
 
     cout << "텍스트 알피지!" << endl;
     system("pause");
@@ -401,6 +550,7 @@ void main()
     manager.DeleteManager();
     manager.inven->DeleteItem();
     delete manager.inven;
+    delete manager.equip;
 }
 
 
@@ -415,14 +565,14 @@ void main()
 
 bool ReadFileData()
 {
-    SaveData data = {};
+    StatData data = {};
 
     FILE* pFile = nullptr;
     errno_t err = fopen_s(&pFile, "../Data/SaveFile.txt", "rb");  // 상대 경로 vcx 한 칸 뒤로
 
     if (0 == err)
     {
-        fread(&data, sizeof(SaveData), 1, pFile);
+        fread(&data, sizeof(StatData), 1, pFile);
 
         fclose(pFile);
 
@@ -434,7 +584,7 @@ bool ReadFileData()
         }
 
         manager.SetPlayer(new Player());
-        manager.player->saveData = data;
+        manager.player->statData = data;
         manager.player->SetJob(data.job);
 
         cout << "불러오기 성공!" << endl;
@@ -462,7 +612,7 @@ bool SaveFileData()
 
     if (0 == err)
     {
-        fwrite(&(manager.player->saveData), sizeof(SaveData), 1, pFile);
+        fwrite(&(manager.player->statData), sizeof(StatData), 1, pFile);
 
         fclose(pFile);
 
@@ -611,7 +761,6 @@ void ShowVillageMenu(Player* p)
     {
         system("cls");
 
-        cout << "=============================헤네시스===========================" << endl;
         p->PrintInfo();
         cout << "1.사냥  2.가방  3.메뉴 >> ";
         cin >> iInput;
@@ -656,6 +805,8 @@ void GoToHunt(Player* player)
                 player->GetExp(monster->iExp);  // 경험치 보상
 
                 GetItem(monster->iItemId, 1);
+                GetItem(monster->iItemId + 100);
+                GetItem(monster->iItemId + 200);
 
                 system("cls");
                 cout << "승리!" << endl;
@@ -697,24 +848,40 @@ void GoToHunt(Player* player)
 }
 bool AttackAtoB(Player* player, Monster* monster)
 {
-    monster->iHp -= player->saveData.iAt;
+    monster->iHp -= player->GetTotalAt();
     if (monster->iHp <= 0)
         return true;
     return false;
 }
 bool AttackAtoB(Monster* monster, Player* player)
 {
-    player->saveData.iHp -= monster->iAt;
-    if (player->saveData.iHp <= 0)
+    player->statData.iHp -= ((monster->iAt - player->GetTotalDf()) < 0 ? 0 : (monster->iAt - player->GetTotalDf()));
+    if (player->statData.iHp <= 0)
         return true;
     return false;
 }
 
 void GetItem(int _iId, int _iCount)
 {
-    HpPotion* po = new HpPotion();
-    po->MakePotion((POTION)_iId, _iCount);
-    manager.inven->GetItem(po);
+    if (0 <= _iId &&  100 > _iId)
+    {
+        HpPotion* po = new HpPotion();
+        po->MakePotion((POTION)_iId, _iCount);
+        manager.inven->GetItem(po);
+    }    
+    else if (100 <= _iId && 200 > _iId)
+    {
+        Armor* po = new Armor();
+        po->MakeArmor((ARMOR)_iId);
+        manager.inven->GetItem(po);
+    }
+    else if (200 <= _iId && 300 > _iId)
+    {
+        Weapon* po = new Weapon();
+        po->MakeWeapon((WEAPON)_iId);
+        manager.inven->GetItem(po);
+    }
+
 }
 
 #pragma endregion
