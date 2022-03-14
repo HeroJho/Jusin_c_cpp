@@ -2,13 +2,21 @@
 using namespace std;
 
 // 키워드-자료형의 이름
-struct tagInfo     // 24바이트
+struct tagInfo   
 {
 	bool bChoice;
-	char szName[64];		// 멤버 변수
-	int iA;					// 멤버 변수
-	float fB;				// 멤버 변수
-	double dbTemp;
+	char szName[64];	// 
+	int iA;				// 12/16
+	float fB;			// 16/12
+	double dbTemp;		// 8
+};
+struct Player
+{
+	char D[26];	// 48/46
+	int hp;		// 24/20
+	float A;	// 16/16
+	float B;	// 16/12
+	double C;	// 8/8
 };
 
 struct tegTemp

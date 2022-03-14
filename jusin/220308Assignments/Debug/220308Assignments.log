@@ -1,3 +1,3 @@
 ﻿  220308Assignments.cpp
-C:\Users\thehe\source\repos\jusin\220308Assignments\220308Assignments.cpp(103,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\thehe\source\repos\jusin\220308Assignments\220308Assignments.cpp(88,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
   220308Assignments.vcxproj -> C:\Users\thehe\source\repos\jusin\Debug\220308Assignments.exe

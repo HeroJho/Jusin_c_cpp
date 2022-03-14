@@ -1,24 +1,22 @@
+#include <string>
+#include <vector>
 #include <iostream>
 
 using namespace std;
 
-void Func(const char* c[])
+struct Player
 {
-	cout << c << endl;
-}
+	char D[26];	// 48/46
+	int hp;		// 24/20
+	float A;	// 16/16
+	float B;	// 16/12
+	double C;	// 8/8
+};
 
-void Func(int** i)
+
+
+void main()
 {
-	cout << i[0];
-}
-
-int main()
-{
-	const char* arr[3] = { "111", "222", "444" };
-	int a = 5;
-	int b = 2;
-	int c = 1;
-	int* arra[3] = { &a, &b, &c };
-	Func(arra);
-
+	cout << sizeof(Player);
+	
 }

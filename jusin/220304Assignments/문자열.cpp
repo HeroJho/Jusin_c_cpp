@@ -9,6 +9,7 @@ void ReverseString(char* p, int iLen)
 		cout << p[i];
 	}
 }
+
 int GetLenth(char* c)
 {
 	int iLen = 0;

@@ -19,7 +19,7 @@ typedef struct tagInfos
 typedef struct tagInfos
 {
 
-}INFO, * PINFO; // 포인터 타입 구조
+}INFO, *PINFO; // 포인터 타입 구조
 
 struct tagInfo
 {

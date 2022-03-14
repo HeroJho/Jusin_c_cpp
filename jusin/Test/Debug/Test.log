@@ -1,2 +1,3 @@
 ﻿  Test1.cpp
+C:\Users\thehe\source\repos\jusin\Test\Test1.cpp(19,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
   Test.vcxproj -> C:\Users\thehe\source\repos\jusin\Debug\Test.exe
