@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "220331", "220331\220331.vcxproj", "{ACEE39AC-CFC1-451C-AB8D-9941E163E57D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "220321", "220331\220331.vcxproj", "{ACEE39AC-CFC1-451C-AB8D-9941E163E57D}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "220321Assignments_Student", "220321Assignments\220321Assignments.vcxproj", "{5469665C-0DC4-446E-B861-AAE95189EB00}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "220321Assignments_RPG", "220321Assignments_RPG\220321Assignments_RPG.vcxproj", "{FA48AD3B-A812-47F6-866F-7C2F5CE16BDE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "220322", "220322\220322.vcxproj", "{7C07E076-5436-4647-8E4B-5731823A1E20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,14 @@ Global
 		{FA48AD3B-A812-47F6-866F-7C2F5CE16BDE}.Release|x64.Build.0 = Release|x64
 		{FA48AD3B-A812-47F6-866F-7C2F5CE16BDE}.Release|x86.ActiveCfg = Release|Win32
 		{FA48AD3B-A812-47F6-866F-7C2F5CE16BDE}.Release|x86.Build.0 = Release|Win32
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Debug|x64.ActiveCfg = Debug|x64
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Debug|x64.Build.0 = Debug|x64
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Debug|x86.ActiveCfg = Debug|Win32
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Debug|x86.Build.0 = Debug|Win32
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Release|x64.ActiveCfg = Release|x64
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Release|x64.Build.0 = Release|x64
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Release|x86.ActiveCfg = Release|Win32
+		{7C07E076-5436-4647-8E4B-5731823A1E20}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
