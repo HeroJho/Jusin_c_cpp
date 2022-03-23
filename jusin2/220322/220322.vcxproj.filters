@@ -18,7 +18,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="생성자.cpp">
+    <ClCompile Include="생성자 소멸.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
