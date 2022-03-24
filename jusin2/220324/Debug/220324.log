@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  220324.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\220324.cpp(4,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  220324.vcxproj -> C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Debug\220324.exe
