@@ -1,4 +1,14 @@
-﻿  pch.cpp
-  220324.cpp
-C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\220324.cpp(4,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
-  220324.vcxproj -> C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Debug\220324.exe
+﻿  const 함수, 클래스.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\const 함수, 클래스.cpp(54,3): error C2166: l-value가 const 개체를 지정합니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\const 함수, 클래스.cpp(55,3): error C3892: '_iA': const인 변수에 할당할 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\const 함수, 클래스.cpp(68,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  static 클래스.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(44,1): error C2597: 비정적 멤버 'CCObj::m_iB'에 대한 참조가 잘못되었습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(44,1): error C3867: 'CCObj::m_iB': 비표준 구문입니다. '&'를 사용하여 멤버 포인터를 만드세요.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(44,1): error C2105: '++'에 l-value가 필요합니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(45,3): error C2352: 'CCObj::Draw': 비정적 멤버 함수를 잘못 호출했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(48): message : 'CCObj::Draw' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\static 클래스.cpp(65,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  이니셜라이저.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220324\이니셜라이저.cpp(30,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  코드를 생성하고 있습니다...

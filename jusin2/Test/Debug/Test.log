@@ -1,0 +1,4 @@
+﻿  Test.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Test\Test.cpp(37,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Test\Test.cpp(49,23): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Test.vcxproj -> C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Debug\Test.exe

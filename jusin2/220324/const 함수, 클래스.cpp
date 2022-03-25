@@ -9,9 +9,10 @@ class COBj
 private:
 	const int m_iA = 10;
 public:
-	// 읽기전용 함수
-	void Render() const
+	// 읽기전용 함수  >> 내 멤버 변수만 읽기전용
+	void Render(int a) const
 	{
+		a = 10;
 		// m_iA = 20;     // 쓰기 기능을 수행할 수 없다
 		cout << m_iA;
 
