@@ -22,6 +22,9 @@
     <Filter Include="Scene">
       <UniqueIdentifier>{a97979d9-51dc-4c01-9b92-ac2322f7cba9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Inven">
+      <UniqueIdentifier>{6745c533-b4e9-4f31-a165-111badad4de6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -48,6 +51,12 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="CInventory.cpp">
+      <Filter>Inven</Filter>
+    </ClCompile>
+    <ClCompile Include="CItem.cpp">
+      <Filter>Inven</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -73,6 +82,12 @@
     </ClInclude>
     <ClInclude Include="CTown.h">
       <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="CInventory.h">
+      <Filter>Inven</Filter>
+    </ClInclude>
+    <ClInclude Include="CItem.h">
+      <Filter>Inven</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

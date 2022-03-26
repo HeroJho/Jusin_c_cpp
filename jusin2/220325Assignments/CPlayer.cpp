@@ -62,4 +62,15 @@ void CPlayer::PrintInfo()
 		<< "   °æÇèÄ¡: " << m_sStatInfo->m_iExp << "/" << m_sStatInfo->m_iExp * m_sStatInfo->m_iLev;
 }
 
+void CPlayer::GetItemToInven(CItem _cItem)
+{
+	m_cIven.PushItem(_cItem);
+}
+
+void CPlayer::PrintInvenInfos()
+{
+	m_cIven.PrintItemInfo();
+	system("pause");
+}
+
 

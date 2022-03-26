@@ -141,6 +141,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CInventory.cpp" />
+    <ClCompile Include="CItem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CHunt.cpp" />
     <ClCompile Include="CMonster.cpp" />
@@ -155,6 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CHunt.h" />
+    <ClInclude Include="CInventory.h" />
+    <ClInclude Include="CItem.h" />
     <ClInclude Include="CShop.h" />
     <ClInclude Include="CTown.h" />
     <ClInclude Include="Define.h" />

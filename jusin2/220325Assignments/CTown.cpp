@@ -17,7 +17,7 @@ void CTown::Update()
 
 	CGameManager::Get_Player()->PrintInfo();
 	cout << endl << endl;
-	cout << "1.사냥터  2.상점  3.종료	>> ";
+	cout << "1.사냥터  2.상점  3.가방  4.종료	>> ";
 	cin >> iInput;
 
 	switch (iInput)
@@ -29,6 +29,9 @@ void CTown::Update()
 		CGameManager::Set_CurField(FIELD::SHOP);
 		break;
 	case 3:
+		CGameManager::Set_CurField(FIELD::IVEN);
+		break;
+	case 4:
 		CGameManager::Set_CurField(FIELD::NONE);
 		break;
 	default:

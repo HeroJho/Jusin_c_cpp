@@ -11,11 +11,13 @@ class CGameManager
 private:
 	static FIELD m_eCurField;
 	static FIELD m_ePreField;
+
+private:
+	static CPlayer* m_cPlayer;
+
 	CTown* m_cTown;
 	CHunt* m_cHunt;
 	CShop* m_cShop;
-
-	static CPlayer* m_cPlayer;
 
 public:
 	void Update();

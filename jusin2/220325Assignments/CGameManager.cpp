@@ -20,6 +20,7 @@ CGameManager::~CGameManager()
 		delete m_cHunt;
 	if (m_cShop != nullptr)
 		delete m_cShop;
+
 }
 
 void CGameManager::Set_CurField(FIELD _eCurField)
@@ -75,8 +76,14 @@ void CGameManager::Update()
 		m_cTown->Update();
 		break;
 	case FIELD::HUNT:
+		//m_cHunt->Update();
 		break;
 	case FIELD::SHOP:
+		m_cShop->Update();
+		break;
+	case FIELD::IVEN:
+		CGameManager::m_cPlayer->PrintInvenInfos();
+		CGameManager::Set_CurField(CGameManager::Get_PreField());
 		break;
 	default:
 		break;

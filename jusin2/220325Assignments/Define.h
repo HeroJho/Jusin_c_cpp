@@ -12,5 +12,5 @@ struct StatInfo
 };
 
 enum class MONSTER { SLIME = 1, MUSHROOM, ORK };
-enum class FIELD { NONE, TOWN, HUNT, SHOP };
+enum class FIELD { NONE, TOWN, HUNT, SHOP, IVEN };
 enum class CLASS{ NONE, WOR, MAG, ARCH};
