@@ -8,11 +8,8 @@
 #define PCH_H
 
 #include <iostream>
-#include "Player.h"
 
 using namespace std;
-
-Player p;
 
 
 #endif //PCH_H

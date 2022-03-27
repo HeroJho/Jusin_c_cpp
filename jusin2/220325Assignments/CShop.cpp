@@ -15,8 +15,6 @@ void CShop::Update()
 
 	do
 	{
-		system("cls");
-
 		cout << "무엇을 살까요?" << endl;
 		cout << "1.검  2.방패  3.뒤로가기	>> ";
 		cin >> iInput;

@@ -73,4 +73,21 @@ void CPlayer::PrintInvenInfos()
 	system("pause");
 }
 
+bool CPlayer::Attacked(int _iDamage)
+{
+	m_sStatInfo->m_iHp -= _iDamage;
+	
+	if (m_sStatInfo->m_iHp <= 0){
+		m_sStatInfo->m_iHp = m_sStatInfo->m_iMaxHp;
+		return true;
+	}
+	
+	return false;
+}
+
+int CPlayer::Get_At()
+{
+	return m_sStatInfo->m_iAt;
+}
+
 

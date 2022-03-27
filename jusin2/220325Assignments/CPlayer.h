@@ -16,6 +16,10 @@ public:
 	void PrintInvenInfos();
 
 public:
+	bool Attacked(int _iDamage);
+	int Get_At();
+
+public:
 	CPlayer(CLASS _eClass);
 	~CPlayer();
 

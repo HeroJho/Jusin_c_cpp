@@ -6,7 +6,14 @@ private:
 	StatInfo* m_sStatInfo;
 
 public:
-	CMonster(MONSTER _sValue);
+	void PrintInfo();
+
+public:
+	bool Attacked(int _iDamage);
+	int Get_At();
+
+public:
+	CMonster(int _sValue);
 	~CMonster();
 
 };

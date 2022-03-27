@@ -4,9 +4,8 @@
 #define PCH_H
 
 #include <iostream>
-#include "Define.h"
 using namespace std;
-
+#include "Define.h"
 
 #endif //PCH_H
 
