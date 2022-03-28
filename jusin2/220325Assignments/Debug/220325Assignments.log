@@ -1,9 +1,10 @@
-﻿  CGameManager.cpp
+﻿  CObject.cpp
+  main.cpp
   CHunt.cpp
   CMonster.cpp
-  CPlayer.cpp
+  CGameManager.cpp
   CShop.cpp
   CTown.cpp
-  main.cpp
+  CPlayer.cpp
   코드를 생성하고 있습니다...
   220325Assignments.vcxproj -> C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\Debug\220325Assignments.exe

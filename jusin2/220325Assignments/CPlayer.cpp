@@ -3,8 +3,7 @@
 
 
 CPlayer::CPlayer(CLASS _eClass)
-	:m_sStatInfo(nullptr)
-	,m_eClass(CLASS::NONE)
+	:m_eClass(CLASS::NONE)
 {
 
 	m_sStatInfo = new StatInfo();

@@ -1,9 +1,11 @@
 #pragma once
 
+# include "CObject.h"
+
 class CMonster
+	: public CObject
 {
 private:
-	StatInfo* m_sStatInfo;
 
 public:
 	void PrintInfo();

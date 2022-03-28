@@ -11,9 +11,11 @@ CItem::CItem(int _iId)
 	switch (_iId)
 	{
 	case 1:
+		m_iId = _iId;
 		m_cName = "°Ë";
 		break;
 	case 2:
+		m_iId = _iId;
 		m_cName = "°©¿Ê";
 		break;
 	}

@@ -3,7 +3,6 @@
 
 
 CMonster::CMonster(int _sValue)
-	:m_sStatInfo(nullptr)
 {
 	switch (_sValue)
 	{

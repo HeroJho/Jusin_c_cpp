@@ -1,11 +1,12 @@
 #pragma once
 
 #include "CInventory.h"
+#include "CObject.h"
 
 class CPlayer
+	: public CObject
 {
 private:
-	StatInfo* m_sStatInfo;
 	CLASS m_eClass;
 	string m_cClassName;
 	CInventory m_cIven;

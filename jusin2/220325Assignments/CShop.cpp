@@ -47,3 +47,4 @@ void CShop::Update()
 
 	CGameManager::Set_CurField(CGameManager::Get_PreField());
 }
+
