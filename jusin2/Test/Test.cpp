@@ -1,76 +1,40 @@
-﻿#include "pch.h"
-#include <string>
+﻿#include <string>
 #include <vector>
-#include <cmath>
 #include <iostream>
 
 using namespace std;
 
-int CharToInt(char _value)
+vector<int> TenTo2(int _v)
 {
-    if (_value == 'S') {
-        return 1;
+    vector<int> s;
+    vector<int> temp;
+    int count = 0;
+
+    while (1 < _v)
+    {
+        if (_v % 2 == 0)
+            s.push_back(0);
+        else
+            s.push_back(1);
+        _v /= 2;
+        ++count;
     }
-    else if (_value == 'D') {
-        return 2;
-    }
-    else if (_value == 'T') {
-        return 3;
-    }
-    else
-        return _value - 48;
+
+    s.push_back(1);
+
+    for (; count < 5; ++count)
+        s.push_back(0);
+
+    for (int i = 0; i < count; ++i)
+        temp.push_back(s[count - 1 - i]);
+
+    return temp;
 }
 
-int solution(string dartResult) {
-    int answer = 0;
-    vector<int> temps;
-    int ad = 0;
-    //    < 7
-    for (int i = 0, count = 0; i < dartResult.size(); i += 2, ++count)
-    {
-        if (dartResult[i + 1] == '0') {
-            ++i;
-            ad = pow(10, CharToInt(dartResult[i + 1]));
-        }
-        else
-            ad = pow(CharToInt(dartResult[i]), CharToInt(dartResult[i + 1]));
-
-        temps.push_back(ad);
-
-        if (i + 2 > dartResult.size())
-            break;
-
-        if (dartResult[i + 2] == '*')
-        {
-            ++i;
-
-            if (count > 0)
-                temps[count - 1] *= 2;
-            temps[count] *= 2;
-
-            continue;
-        }
-        else if (dartResult[i + 2] == '#')
-        {
-            ++i;
-
-            temps[count] *= -1;
-
-            continue;
-        }
-
-    }
-
-    for (int i = 0; i < temps.size(); ++i)
-    {
-        answer += temps[i];
-    }
+vector<string> solution(int n, vector<int> arr1, vector<int> arr2) {
+    vector<string> answer;
+    // i번째 하나로도 벽이면 >> 벽
+    // i번때 둘다 공백이면   >> 공백
 
     return answer;
-}
-
-void main()
-{
-
-    cout << solution("1D2S#10S");
 }
