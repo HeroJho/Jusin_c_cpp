@@ -13,9 +13,7 @@ public:
 public:
     bool operator==(const String& ref)
     {
-        if (!strcmp(m_cTemp, ref.m_cTemp))
-            return true;
-        return false;
+        return !strcmp(m_cTemp, ref.m_cTemp);
     }
     String operator+(const String& ref)
     {
