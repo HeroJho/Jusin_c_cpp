@@ -1,14 +1,10 @@
 ﻿#include "pch.h"
-#include <cmath>
+#include "CPlayer.h"
 
-class Vector2
-{
-private:
-
-
-};
+using namespace std;
 
 int main()
 {
-	
+	//CPlayer pp;
+	return 0;
 }

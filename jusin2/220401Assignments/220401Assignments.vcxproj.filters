@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{01034254-a265-4c41-a562-3f80299941d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stack">
+      <UniqueIdentifier>{2751fb30-1ccc-45a3-bb6b-945b729efeed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tool">
+      <UniqueIdentifier>{246c7c45-8aa0-4d45-9e3f-ecb1fa9c783f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LinkedList">
+      <UniqueIdentifier>{f2edcb21-c779-4999-b962-fe672237bcac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DoubleLinkedList">
+      <UniqueIdentifier>{eded52e9-fefa-4f17-9214-2553c91e4888}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dequeue">
+      <UniqueIdentifier>{be7e6ffd-544c-4721-8866-af6779140a7c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="220401Assignments.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueMadeByArray.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="StackMadeByArray.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Node.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicArray.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DNode.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="DListedList.cpp">
+      <Filter>DoubleLinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="DequeueMadeByArray.cpp">
+      <Filter>Dequeue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueMadeByArray.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="StackMadeByArray.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicArray.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DNode.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="DListedList.h">
+      <Filter>DoubleLinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="DequeueMadeByArray.h">
+      <Filter>Dequeue</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
