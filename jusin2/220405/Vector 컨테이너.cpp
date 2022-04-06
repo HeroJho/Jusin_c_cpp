@@ -42,6 +42,8 @@ int main()
 #pragma endregion
 
 
+#pragma region 자주 쓰이는 멤버 함수
+
 #pragma region size()
 
 	// size() 컨테이너 원소의 개수를 반환 (모든 컨테이너가 가진다)
@@ -139,6 +141,83 @@ int main()
 	}*/
 
 #pragma endregion
+
+#pragma region insert()
+
+	// 임의의 위치에 원소를 삽입하는 함수
+	// vecInt.insert(iter, 60000);
+
+#pragma endregion
+
+#pragma region erase() *사용법 특이! 중요!
+
+	// 임의의 위치에 원소를 삭제하는 함수
+	// iter = vecInt.erase(iter);
+
+
+	// iter를 접근하려면 터진다
+	iter = vecInt.erase(iter);	
+	cout << (*iter) << endl;
+
+	// 왜?
+	// iter: 원소를 가리키기위한 객체 (메모리를 가리키는 용도가 아니다!)
+	// 원소가 삭제됐다 >> 가리키는 원소가 없는데?
+	// 반환값이 원소를 새로 가리킨 이터
+	// 이터의 역할: 삭제를 한 뒤에 다음 원소를 가리키는 이터를 반환!! 반환값으로 받아줘야 한다!
+
+	// 리스트를 생각해보자!
+	
+#pragma endregion
+
+#pragma endregion
+
+
+#pragma region 메모리 확보를 위한 vector의 함수들
+
+
+#pragma region 생성자 사용
+
+	vector<int>		vecInt(10);
+	// 생성 시점에 원소 값이 0으로 초기화된 상태로 사이즈와 카파시티를 미리 10개 만들어주는 문법
+	//     ㄴsize == 카파시티
+	// 이러니 push_back하면 바로 재할당이 일어남
+
+#pragma endregion
+
+#pragma region resize()
+
+	vecInt.resize(2);		
+	// 원소의 개수를 다시 조정하는 함수.
+	//    ㄴ단, 이미 확보된 메모리 공간(카파시티)은 줄어들지 않는다.
+
+	vecInt.resize(50);
+	// 증가를 시키면 그만큼 재할당(카파시티 증가)한다.
+
+#pragma endregion
+
+#pragma region reserve()
+
+	vecInt.reserve(10);	
+	// 원소 개수 변동 없이 오로지 메모리 공간을 미리 확보하는 함수
+	// size는 0이고 캐퍼시티만 늘린다
+
+#pragma endregion
+
+
+#pragma region 정리
+
+	// 결국 생성자를 통해 공간 확보를하고 reize함수를 쓰는 것 보다
+	// reserve를 쓰는게 편하다.
+	// 하지만 이마져도 메모리 공간을 알아서 해주니 메모리 확보 관련 함수들은 잘 사용을 안 하게된다.
+
+#pragma endregion
+
+
+#pragma endregion
+
+
+
+
 
 	return 0;
 }

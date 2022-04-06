@@ -1,0 +1,62 @@
+﻿  220406Assignments.cpp
+  CGameManager.cpp
+  CHunt.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(36,17): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(36,44): error C2039: 'Get_PreField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(36,56): error C3861: 'Get_PreField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(36,29): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(40,2): error C2065: 'CMonster': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(40,11): error C2146: 구문 오류: ';'이(가) '_cMonster' 식별자 앞에 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(40,11): error C3861: '_cMonster': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(47,29): error C2027: 정의되지 않은 형식 'CPlayer'을(를) 사용했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(4): message : 'CPlayer' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(50,3): error C2065: '_cMonster': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(66,18): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(66,45): error C2039: 'Get_PreField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(66,57): error C3861: 'Get_PreField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(66,30): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(71,7): error C2065: '_cMonster': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(71,6): error C2027: 정의되지 않은 형식 'CPlayer'을(를) 사용했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(4): message : 'CPlayer' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(75,18): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(75,30): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(78,6): error C2027: 정의되지 않은 형식 'CPlayer'을(를) 사용했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(4): message : 'CPlayer' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(78,44): error C2065: '_cMonster': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(82,18): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CHunt.cpp(82,30): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+  CShop.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(38,3): error C2065: 'CItem': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(38,9): error C2146: 구문 오류: ';'이(가) 'item' 식별자 앞에 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(38,9): error C3861: 'item': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(39,29): error C2027: 정의되지 않은 형식 'CPlayer'을(를) 사용했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(4): message : 'CPlayer' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(39,46): error C2065: 'item': 선언되지 않은 식별자입니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(48,16): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(48,43): error C2039: 'Get_PreField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(48,55): error C3861: 'Get_PreField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CShop.cpp(48,28): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+  CTown.cpp
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(18,28): error C2027: 정의되지 않은 형식 'CPlayer'을(를) 사용했습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(4): message : 'CPlayer' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(26,17): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(26,29): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(29,17): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(29,29): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(32,17): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(32,29): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(35,17): error C2039: 'Set_CurField': 'CGameManager'의 멤버가 아닙니다.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CGameManager.h(8): message : 'CGameManager' 선언을 참조하십시오.
+C:\Users\thehe\OneDrive\바탕 화면\jusin\jusin2\220406Assignments\CTown.cpp(35,29): error C3861: 'Set_CurField': 식별자를 찾을 수 없습니다.
+  코드를 생성하고 있습니다...
