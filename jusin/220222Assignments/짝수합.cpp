@@ -20,6 +20,6 @@ int main()
 
 		cout << "Â¦¼öÀÇ ÇÕ: " << iSum << endl;
 
-
 	} while (true);
+	
 }
