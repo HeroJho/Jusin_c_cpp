@@ -34,7 +34,7 @@ using namespace std;
 // 컴퓨터는 정수, 소수, 글자를 구분하기 위해서 자료형으로 구분한다! 기본 자료형!
 //  ㄴ정수 타입: short(2b), int(4b), long(4b), long long(8b)
 //      ㄴ과거에는 int가 4b가 아니였음. long은 안 쓰임.
-//  ㄴ소수 타입: float(4), double(4), long double(8 아주 안 쓰임)
+//  ㄴ소수 타입: float(4), double(8), long double(8 아주 안 쓰임)
 //  ㄴ문자 타입: char(1)
 //  ㄴ논리 타입: bool(1)
 // 자료형에 따라 용량이 다르다!

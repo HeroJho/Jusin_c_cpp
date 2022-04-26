@@ -11,7 +11,6 @@ int main()
 
 #pragma region list란
 
-	// 리스트
 	// 선형 구조.
 	// 노드 기반의 컨테이너.
 

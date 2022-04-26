@@ -9,7 +9,7 @@ public:
 	{
 		cout << "인자 하나 생성자" << endl;
 	}
-	CObj(CObj& rObj)			// 원본에 해당하는 데이터를 사본에 데이터로 복사를 수행
+	CObj(CObj& rObj)			// 원본에 해당하는 데이터를 사본의 데이터로 복사를 수행
 	{
 		m_iA = rObj.m_iA;
 		cout << "복사 생성자 호출" << endl;

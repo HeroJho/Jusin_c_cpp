@@ -50,18 +50,19 @@ inline int		Square(int iX)
 #pragma endregion
 
 #pragma region 인라인이 일반 함수로 바뀌는 경우
-// 인라인 함수를 선언했더라도 일반 함수로 바뀌는 경우
+
 	// 1. void(*ptr)() = Func , 인라인 함수를 함수 포인터로 활용할 때, 주소가 필요하니 함수로 만들어서 넣는다
 	// 2. 인라인 함수를 재귀 형태로 호출할 때  >> 함수를 또 호출해야하니 메모리에 등록해서 사용 >> 몇번 치환을 해야해? 문제도 있다
 	// - 그 외에 컴파일이 알아서 한다. 
-	//   그냥 만들고 되면 좋고 안 되면 안 좋고 마인드로 작성!
+
 #pragma endregion
 
 #pragma region 결론
-// 결론
+
 // 컴파일러가 발전하면서 현시대는 inline을 붙여주는게 무의미
 // 컴파일러가 판단해서 inline을 자동으로 한다.
 // 프로그래머가 inline을 신경쓰면서 코딩할 필요는 없다.
+
 #pragma endregion
 
 int main()

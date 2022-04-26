@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 
 #pragma region 이니셜라이저
-// 이니셜라이저
+
 // 생성자에서 상수를 초기화하기 위한 문법
 // 생성과 동시에 초기화하는 문법
 class CObj

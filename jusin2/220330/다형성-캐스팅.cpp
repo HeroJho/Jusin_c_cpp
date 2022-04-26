@@ -20,17 +20,15 @@
 	// 2의 문제를 극복하고자 c++의 캐스팅 연산자가 등장했다.
 
 
-	// oop, RTTI, 콜백 >> 면접에서 자주 나오는
-	// ex) RTTI 문법을 사용해본 경험이 있나요?
+
 
 	// c++ 캐스팅 연산자
-	// 지금 배울 4가지 캐스팅 RTTI의 문법이다
-	//    ㄴ런타임에 포인터가 실제 어떤 객체를 가리키는지 알고 싶을때 typeid
 	// <변환하고 싶은 자료형>(변환할 데이터)
 	// 1. static_cast<>();
 	// 2. dynamic_cast<>();
 	// 3. const_cast<>();
 	// 4. reinterpret_cast<>();
+
 
 #pragma endregion
 
@@ -39,13 +37,12 @@
 #pragma region static_cast
 
 	// 특징:
-	//	1) 논리적인 형변환을 수행
+	//	1) 상속관계에 따른 논리적인 형변환을 수행
 	//	2) 우리가 늘 써오던 c스타일 캐스팅과 흡사
 	//	3) 형변환 시점이 "컴파일 시점"이기 때문에 static이라는 이름을 붙어졌다.
 int iNumber = static_cast<int>(3.14f);
 
-
-// 논리적이지 않은 캐스팅 상태 1
+// 논리적이지 않은 캐스팅 상태 1 
 {
 	// CPlayer*	pPlayer = new CPlayer;
 
@@ -82,7 +79,7 @@ int iNumber = static_cast<int>(3.14f);
 // 생각 정리
 // static_cast는 c캐스팅과 다르게 상속의 여부를 판단해 준다.
 //	ㄴ컴파일 시점에 일어나기 때문에 빠르다.
-// 하지만, 다운 캐스팅(부모 > 자식)역시 허용하기 때문에 논리적이지 않은 캐스팅도 허용한다.
+// 하지만, 잘못된 다운 캐스팅(부모 > 자식)역시 허용하기 때문에 논리적이지 않은 캐스팅도 허용한다.
 //  ㄴ이것은 온전히 프로그래머의 실수이다. 컴파일러가 잡아주지 않는다.
 
 #pragma endregion
@@ -114,6 +111,20 @@ int iNumber = static_cast<int>(3.14f);
 	//CPlayer*	pPlayer = dynamic_cast<CPlayer*>(pObj);
 	//pPlayer->Render();
 }
+
+#pragma endregion
+
+#pragma region RTTI 문법
+
+// dynamic_cast는 RTTI의 문법이다
+// RTTI는 런타임 때 주소가 실제 가리키고 있는 클래스 자료형이 뭔지 알 수 있다.
+//    ㄴ런타임에 포인터가 실제 어떤 객체를 가리키는지 알고 싶을때 typeid
+// dynamic_cast의 경우 실제 가리키는 주소가 자식인지 판단하기 위해서 typeid와 같은 RTTI문법을 사용한다.
+
+
+	// oop, RTTI, 콜백 >> 면접에서 자주 나오는
+	// ex) RTTI 문법을 사용해본 경험이 있나요?
+
 
 #pragma endregion
 

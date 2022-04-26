@@ -19,10 +19,10 @@ int main()
 	// 앞과 뒤가 있다는 것은 선형적인 구조에서만 가진다(비선형은 앞 뒤 개념이 없다)
 	// 앞뒤가 열린 덱, 리스트는 앞 관련 함수도 추가로 가지고 있다
 
-	//push_front() : deque와 list 사용 가능
-	//pop_front() : deque와 list 사용 가능
-	//push_back() : 모든 시퀀스 컨테이너 사용 가능
-	//pop_back() : 모든 시퀀스 컨테이너 사용 가능
+	// push_front() : deque와 list 사용 가능
+	// pop_front()	: deque와 list 사용 가능
+	// push_back()	: 모든 시퀀스 컨테이너 사용 가능
+	// pop_back()	: 모든 시퀀스 컨테이너 사용 가능
 
 #pragma endregion
 
@@ -31,8 +31,6 @@ int main()
 
 	// 벡터는 배열 기반이기 때문에 []연산자(오버로딩 된)를 사용할 수 있다!
 	// 임의접근 가능
-
-
 
 	// vecInt[3] = 777;		// 인덱스 접근을 통한 원소의 값 변경이 가능
 
@@ -73,7 +71,9 @@ int main()
 
 #pragma endregion
 
-#pragma region capacity()
+
+
+#pragma region capacity() *중요
 
 	// - 벡터만 가지는 유일한 함수이다!
 
@@ -86,7 +86,6 @@ int main()
 
 	// 정책은 사용하는 컴파일러마다 다르다!
 	// 비줠스튜의 카파시티 정책: n + n/2
-
 
 
 	/*for (int i = 0; i < 20; ++i)
@@ -119,6 +118,8 @@ int main()
 
 #pragma endregion
 
+
+
 #pragma region front(), back()
 
 /*vector<int>	vecInt;
@@ -149,14 +150,16 @@ int main()
 
 #pragma endregion
 
+
+
 #pragma region erase() *사용법 특이! 중요!
 
 	// 임의의 위치에 원소를 삭제하는 함수
 	// iter = vecInt.erase(iter);
 
 
-	// iter를 접근하려면 터진다
-	iter = vecInt.erase(iter);	
+	// 삭제 후 그냥 iter를 접근하려면 터진다
+	vecInt.erase(iter);	
 	cout << (*iter) << endl;
 
 	// 왜?
@@ -168,6 +171,8 @@ int main()
 	// 리스트를 생각해보자!
 	
 #pragma endregion
+
+
 
 #pragma endregion
 
@@ -206,7 +211,7 @@ int main()
 
 #pragma region 정리
 
-	// 결국 생성자를 통해 공간 확보를하고 reize함수를 쓰는 것 보다
+	// 결국 생성자를 통해 공간 확보를 하고 resize함수를 쓰는 것 보다
 	// reserve를 쓰는게 편하다.
 	// 하지만 이마져도 메모리 공간을 알아서 해주니 메모리 확보 관련 함수들은 잘 사용을 안 하게된다.
 
